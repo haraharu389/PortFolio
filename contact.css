@@ -1,0 +1,197 @@
+@charset "UTF-8";
+/* リセットCSS */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: bottom;
+  background: transparent;
+  list-style: none;
+}
+
+body {
+  overflow-x: hidden;
+  /* background-image: url(images/umi.JPG); */
+  background-color: #9e9e9e;
+  height:auto;
+  width: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  font: inherit;
+}
+
+
+
+/* ここまでリセットCSS */
+
+body {
+  font-family: "Arial", sans-serif;
+  color: #555;
+  font-feature-settings: "palt";
+}
+
+main {
+  color: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  padding: 0 20px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+p {
+  font-size: large;
+  margin: 0 0 0 50px;
+}
+
+h2 {
+  margin: 120px 0 40px 50px;
+  font-size: 30px;
+}
+
+img {
+  height: 400px;
+  float: right;
+  
+  margin: -150px 100px 0px 0;
+}
+
+.logo {
+  font-size: 32px;
+  color:#fff;
+}
+
+.hamburger {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 40px;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  display: block;
+  position: absolute;
+  transition: all 0.3s;
+}
+
+.hamburger .bar-top {
+  transform: translate(0, -12px);
+}
+
+.hamburger .bar-bottom {
+  transform: translate(0, 12px);
+}
+
+.checkbox:checked ~ .hamburger .bar-middle {
+  opacity: 0;
+}
+
+.checkbox:checked ~ .hamburger .bar-top {
+  transform: translate(0, 0) rotate(45deg);
+}
+
+.checkbox:checked ~ .hamburger .bar-bottom {
+  transform: translate(0, 0) rotate(-45deg);
+}
+
+.checkbox {
+  display: none;
+}
+
+.nav-menu {
+  position: fixed;
+  width: 280px;
+  height: 100%;
+  background: #000;
+  opacity: 0.8;
+  color: #fff;
+  top: 0;
+  left: -100%;
+  transition: all 0.5s;
+}
+
+.nav-menu ul {
+  margin-top: 100px;
+}
+
+.nav-menu li {
+  margin-bottom: 30px;
+}
+
+.nav-menu a {
+  text-align: center;
+  font-size: 30px;
+}
+
+.checkbox:checked ~ .nav-menu {
+  left: 0;
+}
+
+header{
+  background-color: #66D8D3;
+  display: flex;
+  position: fixed;
+  top: 0;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  padding: 10px 3% 5px;
+}
+
+
+footer{
+  background-color: #66D8D3;
+  width: 100%;
+    height: 80px;
+    position: absolute;
+    bottom: 0px;
+}
+
+footer p{
+  color: white;
+  text-align: center;
+  margin: 25px 0;
+}
+
